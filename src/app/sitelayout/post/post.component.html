@@ -1,0 +1,22 @@
+<aside class="lateral">
+    <app-sidebar></app-sidebar>
+</aside>
+
+<div class="content">
+    <router-outlet></router-outlet>
+
+    <div class="column-container justify-center">
+        <div class="large-box">
+            <span class="post-date">{{ post.date }}</span>
+        </div>
+        <div class="large-box white column-container">
+            <h1 class="fit">{{ post.title }}</h1>
+            <p class="post-content">{{ post.content }}</p>
+            <button class="button button-space-light bottom" (click)="mainPage()">Back</button>
+        </div>
+    </div>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

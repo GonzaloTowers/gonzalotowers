@@ -1,0 +1,52 @@
+@import '../../_variables.scss';
+
+div.content {
+    width: 75%;
+    height: 120px;
+    background-color: $softwhite;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        svg.icon {
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            path {
+                fill: darken($color: $darkwhite, $amount: 50%);
+                transition: .3s;
+            }
+            &:hover > path {
+                fill: $grey;
+                transition: .3s;
+            }
+        }
+
+        i.icon {
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+            font-size: 48px;
+            color: darken($color: $darkwhite, $amount: 50%);
+
+            &:hover {
+                color: $grey;
+            }
+        }
+    }
+
+    a.end-middle {
+        margin-left: 0 !important;
+    }
+
+    a#mail {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../_variables.scss';
+
+div.content {
+    width: 75%;
+    height: 100%;
+    float: right;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    background-color: darken($color: $darkwhite, $amount: 5%);
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+
+    div#profile {
+        width: 40% !important;
+        height: 500px !important;
+        align-self: flex-start;
+    }
+
+    div#cv {
+        width: 56% !important;
+        height: 500px !important;
+        align-self: flex-end;
+
+        div.box-content {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    i {
+        width: fit-content;
+        display: inline-block;
+        font-size: 36px;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        color: $grey;
+        border: 3px solid $grey;
+        border-radius: 50%;
+    }
+
+    label {
+        width: fit-content;
+        display: inline-block;
+        font: 1.2em/1 'Varela Round', sans-serif;
+    }
+}
+
+@media screen and (max-width:950px) {
+    div.content {
+        flex-direction: row;
+        overflow-y: scroll;
+        padding-bottom: 500px;
+    }
+    div#profile {
+        width: 100%;
+        flex-grow: 1;
+    }
+    div#cv {
+        width: 100%;
+        flex-grow: 1;
+    }
+}

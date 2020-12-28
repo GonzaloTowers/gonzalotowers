@@ -1,1 +1,337 @@
-/* You can add global styles to this file, and also import other style files */
+@import '_variables.scss';
+
+////////////
+// Reset //
+///////////
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.transparent {
+    background-color: transparent !important;
+}
+
+.white {
+    background-color: $white !important;
+}
+
+////////////////
+// Structure //
+///////////////
+
+.pack {
+    width: 100%;
+    padding: 10px;
+    display: block;
+}
+
+.pack > * {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+//////////////////
+// Disposition //
+/////////////////
+
+.column-container {
+    //width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row-container {
+    //width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.fit {
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+.bottom {
+    margin-top: auto !important;
+}
+
+// horizontal-vertical
+
+.start-start {
+    margin-right: auto;
+    align-self: flex-start;
+}
+
+.start-middle {
+    margin-right: auto;
+    align-self: center;
+}
+
+.start-end {
+    margin-right: auto;
+    align-self: flex-end;
+}
+
+.end-start {
+    margin-left: auto;
+    align-self: flex-start;
+}
+
+.end-middle {
+    margin-left: auto;
+    align-self: center;
+}
+
+.end-end {
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+////////////
+// Boxes //
+///////////
+
+.box {
+    min-width: 150px;
+    width: 150px;
+    min-height: 150px;
+    height: 150px;
+    margin: 10px;
+    //flex-grow: 1;
+    border-radius: 10px;
+    @include transition();
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .box-image {
+        width: 100%;
+        height: 60%;
+        background-color: $grey;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box-content {
+        width: 100%;
+        height: 40%;
+        background-color: $softwhite;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        flex-grow: 1;
+    }
+}
+
+.box:hover {
+    box-shadow: 0px 1px 5px $darkgrey;
+    @include transition()
+}
+
+.large-box {
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+    background-color: $darkgrey;
+    display: block;
+    flex-grow: 1;
+    border-radius: 10px;
+    @include transition();
+    display: flex;
+}
+
+@media (max-width: 899px) {
+    .box {
+        margin: 5px;
+        min-width: 90%;
+        @include transition()
+    }
+    .large-box {
+        margin: 5px;
+        @include transition()
+    }
+}
+
+/////////////
+// Titles //
+////////////
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Varela Round', sans-serif;
+    color: $darkgrey;
+    width: fit-content;
+    height: fit-content;
+}
+
+.box-title {
+    font-size: 1.8em;
+    padding: 10px;
+}
+
+//////////////
+// Buttons //
+/////////////
+
+.button {
+    width: fit-content;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font: 1.3em/1 'Varela Round';
+    color: white;
+    @include transition();
+}
+
+.button-large {
+    width: fit-content;
+    height: 60px;
+}
+
+.button-icon {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: none;
+    border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include transition();
+    text-align: center;
+    font-size: 36px !important;
+}
+
+.button-corner {
+    align-self: flex-end;
+    justify-self: flex-start;
+}
+
+.button-corner-reverse {
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.button-main {
+    background-color: $blue;
+    @include transition();
+
+    &:hover {
+        background-color: darken($color: $blue, $amount: 10%);
+        cursor: pointer;
+        @include transition();
+    }
+}
+
+.button-secondary {
+    background-color: darken($color: $darkwhite, $amount: 50%);
+    @include transition();
+
+    &:hover {
+        background-color: darken($color: $grey, $amount: 10%);
+        cursor: pointer;
+        @include transition();
+    }
+}
+
+.button-green {
+    background-color: $green;
+    @include transition();
+
+    &:hover {
+        background-color: darken($color: $green, $amount: 10%);
+        cursor: pointer;
+        @include transition();
+    }
+}
+
+.button-yellow {
+    background-color: $yellow;
+    @include transition();
+
+    &:hover {
+        background-color: darken($color: $yellow, $amount: 10%);
+        cursor: pointer;
+        @include transition();
+    }
+}
+
+.button-red {
+    background-color: $red;
+    @include transition();
+
+    &:hover {
+        background-color: darken($color: $red, $amount: 10%);
+        cursor: pointer;
+        @include transition();
+    }
+}
+
+.button-space-dark {
+    background-color: $space-blue;
+    @include transition();
+    color: $space-yellow;
+
+    &:hover {
+        background-color: darken($color: $space-blue, $amount: 10%);
+        cursor: pointer;
+        @include transition();
+    }
+}
+
+.button-space-light {
+    background-color: $space-green;
+    @include transition();
+    color: $space-blue;
+
+    &:hover {
+        background-color: darken($color: $space-green, $amount: 10%);
+        cursor: pointer;
+        @include transition();
+    }
+}

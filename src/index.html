@@ -2,12 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Gonzalotowers</title>
+  <title>Gonzalr</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyARrPVlib-TStUSKmdTRbFvqLkiNHXvKO8",
+      authDomain: "gonzalotowers-3b1ac.firebaseapp.com",
+      databaseURL: "https://gonzalotowers-3b1ac.firebaseio.com",
+      projectId: "gonzalotowers-3b1ac",
+      storageBucket: "gonzalotowers-3b1ac.appspot.com",
+      messagingSenderId: "911845405591",
+      appId: "1:911845405591:web:fb703983ca3cc76609cad2",
+      measurementId: "G-W4QVB9YWD0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </body>
 </html>

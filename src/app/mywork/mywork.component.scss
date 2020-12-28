@@ -1,0 +1,47 @@
+@import '../../_variables.scss';
+
+aside.lateral {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+}
+
+div.content {
+    width: 75%;
+    height: 100%;
+    padding: 10px;
+    float: right;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: darken($color: $darkwhite, $amount: 5%);
+
+    div.options {
+        align-self: flex-start;
+        div {
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: $darkgrey;
+            @include transition();
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+
+            h2 {
+                font: 1.3em/1 'Varela Round';
+                color: white;
+            }
+
+            &:hover {
+                width: 200px;
+                @include transition();
+            }
+        }
+    }
+}

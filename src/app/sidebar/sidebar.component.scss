@@ -1,0 +1,65 @@
+@import '../../_variables.scss';
+
+div.sidebar {
+    width: 25%; // 100%
+    height: 100%;
+    background: $softwhite;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed; //relative
+    left: 0; //
+    top: 0; //
+
+    nav.main-menu {
+        width: fit-content;
+        position: absolute;
+        left: 0;
+        margin-left: auto;
+        right: 0;
+        margin-right: auto;
+
+        ul {
+            width: fit-content;
+            margin: auto;
+            list-style: none;
+
+            li {
+                font-size: 1.2em;
+                font-family: 'Varela Round';
+
+                a {
+                    text-decoration: none;
+                    color: darken($color: $darkwhite, $amount: 50%);
+                    @include transition();
+
+                    &:hover {
+                        color: darken($color: $grey, $amount: 0);
+                        @include transition();
+                    }
+                }
+
+                a.active {
+                    color: $grey;
+                }
+            }
+        }
+
+    }
+
+    h1.title {
+        margin-top: auto;
+        padding: 10px;
+        font-size: 2em;
+        font-family: 'Varela Round';
+        text-align: center;
+        writing-mode: tb-rl;
+        //writing-mode: vertical-lr;
+        //text-orientation: upright;
+        color: #fff;
+        background: linear-gradient($grey, $darkwhite);
+        //background-color: #123456;
+    }
+}

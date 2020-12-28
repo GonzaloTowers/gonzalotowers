@@ -1,0 +1,31 @@
+<aside class="lateral">
+    <app-sidebar></app-sidebar>
+</aside>
+
+<div class="content">
+    <router-outlet></router-outlet>
+
+    <div class="box" id="profile">
+        <div class="box-image"></div>
+        <div class="box-content">
+            <div class="pack">
+                <i class="material-icons-round">watch</i>
+                <label>24 years old</label>
+            </div>
+            <div class="pack">
+                <i class="material-icons">menu_book</i>
+            </div>
+        </div>
+    </div>
+
+    <div class="box" id="cv">
+        <div class="box-content">
+            <h2 class="box-title">Experience</h2>
+            <button class="button button-secondary start-end">Download as PDF</button>
+        </div>
+    </div>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

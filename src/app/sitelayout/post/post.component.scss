@@ -1,0 +1,33 @@
+aside.lateral {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+}
+
+div.content {
+    width: 75%;
+    height: 100%;
+    float: right;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    //justify-content: center;
+    //align-items: center;
+    background-color: #31233D;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: scroll;
+    font-family: 'Varela Round';
+
+    .post-date {
+        font-size: 1.4em;
+        margin: 10px;
+    }
+
+    .post-content {
+        font-size: 1.2em;
+        margin: 10px;
+    }
+}
