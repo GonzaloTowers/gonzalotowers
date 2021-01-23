@@ -13,6 +13,11 @@ import { ToolsComponent } from './tools/tools.component';
 import { PostComponent } from './sitelayout/post/post.component';
 import { MY_WORK_ROUTES } from './mywork/mywork.routes';
 
+import { registerLocaleData } from '@angular/common';
+import localeES from "@angular/common/locales/es";
+
+registerLocaleData(localeES, "es");
+
 const routes: Routes = [
   {path: '',
     children: [

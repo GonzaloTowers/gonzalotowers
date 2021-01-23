@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from './post/post';
+import { NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-sitelayout',
@@ -8,7 +8,17 @@ import { Post } from './post/post';
 })
 export class SitelayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private zone: NgZone) { 
+
+    /*matchMedia('(max-width: 400px)').addListener((mql => {
+      if (mql.matches) {
+          this.zone.run(() => {
+              this.myclass = 'toggled';
+          });
+      }
+    }));*/
+
+  }
 
   ngOnInit() {
     
